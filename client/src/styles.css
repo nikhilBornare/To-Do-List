@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-color: #07000d;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  color: #f1f1f1;
+  font-family: "Rubik", sans-serif;
+  padding: 0 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 2.5rem 0 1rem;
+  letter-spacing: 1px;
+  color: #e3dfff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.todo:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mutations {
+  display: flex;
+  gap: 1rem;
+}
+
+.todo__status,
+.todo__delete {
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: none;
+  color: #f1f1f1;
+  font-size: 1.6rem;
+}
+
+.todo__status:hover,
+.todo__delete:hover {
+  transform: scale(1.25);
+}
+
+.todo__status {
+  font-size: 1.75rem;
+  color: #71ffd2;
+}
+
+.todo__delete {
+  color: #ff7171;
+}
+
+.form {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.form__input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form__input:focus,
+.form__input:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.form__button {
+  border: none;
+  background-color: rgba(113, 0, 212, 0.8);
+  cursor: pointer;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form__button:hover {
+  background-color: rgba(95, 0, 179, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(113, 0, 212, 0.3);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+
+  .form,
+  .todo {
+    width: 90%;
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .form,
+  .todo {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .todo {
+    padding: 0.75rem;
+  }
+}
